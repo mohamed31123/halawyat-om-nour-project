@@ -1,0 +1,141 @@
+.page { min-height: 100vh; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(145deg, #3A1A2E 0%, #6B1840 50%, #9B2553 100%);
+  padding: 80px 28px 90px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.heroPattern {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D4973A' fill-opacity='0.07'%3E%3Ccircle cx='30' cy='30' r='10'/%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='60' cy='0' r='10'/%3E%3Ccircle cx='0' cy='60' r='10'/%3E%3Ccircle cx='60' cy='60' r='10'/%3E%3C/g%3E%3C/svg%3E");
+}
+.heroGlow {
+  position: absolute; top: -40%; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(212,151,58,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.heroContent { position: relative; max-width: 600px; margin: 0 auto; }
+
+.heroTag {
+  display: inline-block; font-size: 0.85rem; font-weight: 500;
+  color: var(--gold-light); border: 1px solid rgba(212,151,58,0.4);
+  padding: 6px 20px; border-radius: var(--radius-full); margin-bottom: 24px;
+  letter-spacing: 0.06em;
+}
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 600; color: white; line-height: 1.1; margin-bottom: 18px;
+}
+.heroTitle em { font-style: normal; color: var(--gold-light); display: block; }
+.heroSub { font-size: 1.1rem; color: rgba(255,255,255,0.65); font-weight: 300; line-height: 1.8; margin-bottom: 26px; }
+
+.heroBadges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 32px; }
+.heroBadge {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85); padding: 6px 16px; border-radius: var(--radius-full);
+  font-size: 0.85rem; font-weight: 500;
+}
+.heroWaBtn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  border: none; border-radius: var(--radius-full);
+  padding: 15px 36px; font-size: 1.05rem; font-weight: 700; color: white;
+  box-shadow: 0 8px 28px rgba(37,211,102,0.4); transition: var(--transition);
+  cursor: pointer;
+}
+.heroWaBtn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(37,211,102,0.5); }
+.waIcon { font-size: 1.3rem; }
+
+.heroEmojis {
+  position: absolute; bottom: 20px; right: 0; left: 0;
+  display: flex; justify-content: center; gap: 20px; font-size: 1.5rem; opacity: 0.3;
+}
+
+/* TRUST BAR */
+.trustBar {
+  background: var(--white); border-bottom: 1px solid var(--border);
+  padding: 14px 28px; display: flex; align-items: center;
+  justify-content: center; gap: 18px; flex-wrap: wrap;
+  font-size: 0.88rem; font-weight: 500; color: var(--text-light);
+}
+.divider { color: var(--border-md); }
+
+/* SECTIONS */
+.section { padding: 52px 40px; max-width: 1200px; margin: 0 auto; }
+.sectionHeader { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 28px; }
+.sectionTitle { font-family: var(--font-display); font-size: 1.8rem; font-weight: 600; color: var(--text); }
+.sectionSub { font-size: 0.85rem; color: var(--muted); font-weight: 300; }
+.count { font-size: 0.82rem; color: var(--muted); background: var(--rose-pale); padding: 4px 12px; border-radius: var(--radius-full); font-weight: 600; }
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+.grid > div { animation: fadeUp 0.4s ease both; }
+
+/* FILTERS */
+.filtersBar {
+  background: var(--cream-dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  padding: 18px 40px; display: flex; align-items: center;
+  justify-content: space-between; gap: 14px; flex-wrap: wrap;
+  position: sticky; top: 70px; z-index: 100;
+}
+.pills { display: flex; gap: 8px; flex-wrap: wrap; }
+.pill {
+  background: white; border: 1.5px solid var(--border); border-radius: var(--radius-full);
+  padding: 8px 20px; font-size: 0.88rem; font-weight: 500; color: var(--text-light);
+  transition: var(--transition); cursor: pointer;
+}
+.pill:hover { border-color: var(--rose); color: var(--rose); }
+.pillActive { background: var(--rose) !important; border-color: var(--rose) !important; color: white !important; }
+
+.searchWrap {
+  display: flex; align-items: center; gap: 8px;
+  background: white; border: 1.5px solid var(--border); border-radius: var(--radius-full);
+  padding: 8px 16px; transition: var(--transition);
+}
+.searchWrap:focus-within { border-color: var(--rose); }
+.searchInput { border: none; outline: none; background: transparent; font-size: 0.9rem; color: var(--text); min-width: 160px; }
+.clearBtn { background: none; border: none; cursor: pointer; color: var(--muted); font-size: 0.85rem; padding: 0 2px; }
+
+/* EMPTY */
+.empty { text-align: center; padding: 80px 20px; }
+.emptyIcon { font-size: 4rem; margin-bottom: 14px; }
+.emptyText { font-family: var(--font-display); font-size: 1.4rem; color: var(--text); margin-bottom: 8px; }
+.emptySub { font-size: 0.9rem; color: var(--muted); }
+
+/* WHATSAPP BANNER */
+.waBanner {
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+  padding: 48px 40px; margin-top: 20px;
+}
+.waBannerInner {
+  max-width: 900px; margin: 0 auto;
+  display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: center;
+}
+.waEmoji { font-size: 3.5rem; flex-shrink: 0; }
+.waTitle { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: white; margin-bottom: 6px; }
+.waSub { font-size: 0.9rem; color: rgba(255,255,255,0.8); }
+.waBtn {
+  background: white; border: none; border-radius: var(--radius-full);
+  padding: 14px 32px; font-size: 1rem; font-weight: 700;
+  color: #128C7E; cursor: pointer; transition: var(--transition);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15); white-space: nowrap; flex-shrink: 0;
+}
+.waBtn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.2); }
+
+@media (max-width: 768px) {
+  .section { padding: 36px 20px; }
+  .filtersBar { padding: 14px 20px; top: 70px; }
+  .waBanner { padding: 36px 20px; }
+  .waBannerInner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 480px) {
+  .hero { padding: 60px 18px 70px; }
+  .trustBar { gap: 10px; font-size: 0.78rem; }
+}

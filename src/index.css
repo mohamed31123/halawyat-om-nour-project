@@ -1,0 +1,95 @@
+/* ============================================
+   حلويات أم نور — Global Styles
+   Warm rose-gold feminine palette, full RTL
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Lateef:wght@400;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Rose-gold feminine palette */
+  --rose:        #C8507A;
+  --rose-light:  #E8789A;
+  --rose-pale:   #FCE8EF;
+  --rose-deep:   #9B2553;
+  --gold:        #D4973A;
+  --gold-light:  #F0B84A;
+  --gold-pale:   #FDF3E0;
+  --plum:        #7B2D8B;
+  --plum-light:  #B060C8;
+  --cream:       #FDF8F2;
+  --cream-dark:  #F5EDE0;
+  --white:       #FFFFFF;
+  --text:        #3A1A2E;
+  --text-light:  #6B3A55;
+  --muted:       #A07890;
+  --border:      rgba(200, 80, 122, 0.15);
+  --border-md:   rgba(200, 80, 122, 0.28);
+
+  --shadow-sm:  0 2px 12px rgba(123, 45, 139, 0.08);
+  --shadow-md:  0 6px 28px rgba(123, 45, 139, 0.14);
+  --shadow-lg:  0 14px 56px rgba(123, 45, 139, 0.2);
+  --shadow-xl:  0 28px 80px rgba(60, 10, 50, 0.28);
+
+  --radius-sm:   8px;
+  --radius-md:   14px;
+  --radius-lg:   22px;
+  --radius-xl:   32px;
+  --radius-full: 9999px;
+
+  --font-main:    'Tajawal', 'Arial', sans-serif;
+  --font-display: 'Lateef', 'Tajawal', serif;
+
+  --transition: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--cream);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+button { font-family: var(--font-main); cursor: pointer; }
+input, select, textarea { font-family: var(--font-main); }
+a { color: inherit; text-decoration: none; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 99px; }
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
