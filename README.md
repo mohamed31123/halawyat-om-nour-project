@@ -3,6 +3,7 @@
 Application React standalone pour vendre des douceurs marocaines authentiques.
 
 ---
+## Vecel link : https://halawyat-om-nour-project.vercel.app/
 
 ## 🚀 Démarrage rapide
 
