@@ -81,13 +81,6 @@ export default function AdminLoginPage() {
           </button>
         </form>
 
-        <div className={styles.hint}>
-          <p>كلمة المرور الافتراضية: <code>omnour2024</code></p>
-          <p style={{ marginTop: 6, fontSize: '0.75rem', opacity: 0.6 }}>
-            غيّري كلمة المرور في ملف <code>src/utils/data.js</code>
-          </p>
-        </div>
-
         <div className={styles.backLink}>
           <a href="/">← العودة للمتجر</a>
         </div>
